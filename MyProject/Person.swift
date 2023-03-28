@@ -8,10 +8,22 @@
 import Foundation
 
 struct Person {
-    let name: String
-    let surname: String
-    let phone: String
-    let email: String
-    let heght: Double
-    let weight: Double
+    var name: String
+    var surname: String
+    var phone: String
+    var email: String
+    var heght: Double
+    var weight: Double
 }
+
+extension Person {
+    static func getPerson () -> Person {
+        Person(name: "",
+               surname: "",
+               phone: "",
+               email: "",
+               heght: 0.0,
+               weight: 0.0)
+    }
+}
+
