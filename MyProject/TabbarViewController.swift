@@ -12,11 +12,13 @@ final class TabbarViewController: UITabBarController {
     var person: Person!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-    }
+}
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let formTableVC = viewControllers?.first as? FormTableViewController else { return }
+        guard let recomentVC = viewControllers?.last as? RecomentViewController else { return }
+        formTableVC.person = person
+    }
     
 
 }
